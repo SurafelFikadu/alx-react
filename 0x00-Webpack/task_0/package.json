@@ -1,7 +1,7 @@
 {
-  "name": "alx-react",
+  "name": "task_0",
   "version": "1.0.0",
-  "description": "Alx webpack project",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
