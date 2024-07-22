@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "jquery": "^3.7.1",
+    "loadsh": "^0.0.4",
     "lodash": "^4.17.21"
   }
 }
