@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+}
+
+.App-logo {
+  width: 21vw;
+}
+
+.App-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: rgb(226, 14, 14);
+  padding: 20px;
+  border-bottom: 3px solid rgb(226, 14, 14);
+}
+
+.App-body {
+  position: relative;
+  height: 64vw;
+  border-bottom: 3px solid rgb(226, 14, 14);
+}
+
+.App-body p {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+}
+
+.App-body div {
+  position: absolute;
+  top: 7rem;
+  left: 2rem;
+}
+
+.App-footer {
+  text-align: center;
+  padding: 10px;
+}
