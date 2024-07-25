@@ -16,6 +16,7 @@ function App() {
           <input id="email"></input>
           <label htmlFor="password">Password</label>
           <input id="password" ></input>
+          <button>OK</button>
         </div>
       </div>
       <footer className="App-footer" >
