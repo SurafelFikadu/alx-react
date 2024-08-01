@@ -1,31 +1,39 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const CourseListRow = ({isHeader=false, textFirstCell, textSecondCell=null}) => {
+function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   return (
     <tr>
-        {
-            isHeader ? (
-                <>
-                {
-                    textSecondCell ? (
-                        <>
-                            <th>{textFirstCell}</th>
-                            <th>{textSecondCell}</th>
-                        </>
-                        ) : (
-                            <th colSpan="2">{textFirstCell}</th>
-                    )
-                }
-                </>
-            ) : (
-                <>
-                <td>{textFirstCell}</td>
-                <td>{textSecondCell}</td>
-                </>
-            )
-        }
+      {isHeader ?
+        textSecondCell === null ?
+          <th colSpan="2">{textFirstCell}</th>
+        :
+          <>
+            <th>{textFirstCell}</th>
+            <th>{textSecondCell}</th>
+          </>
+      :
+        <>
+          <td>{textFirstCell}</td>
+          <td>{textSecondCell}</td>
+        </>
+      }
     </tr>
-  )
+  );
 }
 
-export default CourseListRow
+CourseListRow.defaultProps = {
+  isHeader: false,
+  textSecondCell: null
+};
+
+CourseListRow.propTypes = {
+  isHeader: PropTypes.bool,
+  textFirstCell: PropTypes.string,
+  textSecondCell: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
+};
+
+export default CourseListRow;
