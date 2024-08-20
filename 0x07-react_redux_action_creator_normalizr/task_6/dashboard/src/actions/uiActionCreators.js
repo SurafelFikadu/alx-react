@@ -10,14 +10,18 @@ export const login = (email, password) => {
   };
 };
 
+export const boundlogin = (email, password) => dispatch(login(email, password));
 export const logout = () => {
     return { type: LOGOUT };
 };
 
+export const boundlogout = () => dispatch(logout());
 export const displayNotificationDrawer = () => {
     return { type: DISPLAY_NOTIFICATION_DRAWER };
 };
 
+export const bounddisplayNotificationDrawer = () => dispatch(displayNotificationDrawer());
 export const hideNotificationDrawer = () => {
     return { type: HIDE_NOTIFICATION_DRAWER };
 };
+export const boundhideNotificationDrawer = () => dispatch(hideNotificationDrawer());
